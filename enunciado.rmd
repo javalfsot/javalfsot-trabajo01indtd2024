@@ -1,0 +1,59 @@
+---
+title: "Enunciados"
+author: "Javier Alfonso Soto"
+date: '9 de octubre de 2024'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Problema 1
+
+Teniendo la matriz:
+
+$$
+\begin{array}{c|ccccc}
+
+ & \text{e1} & \text{e2} & \text{e3} & \text{e4} & \text{e5} \\
+\hline
+\text{d1} &  9  & 11  &  6  &  3  & 12 \\
+\text{d2} &  4  &  2  &  8  &  7  & 13 \\
+\text{d3} & 10  &  1  &  4  &  8  & 7  \\
+
+\end{array}
+$$
+
+Resuelve el problema con cada uno de los métodos o funciones individuales de
+Incertidumbre por separado (tanto en situación favorable como desfavorable).
+
+
+
+# Problema 2
+
+Supongamos que un inversor deportivo debe decidir entre tres posibles
+estrategias a la hora de destinar su dinero en la temporada 24/25 de Dallas
+Mavericks, el equipo de la liga estadounidense de baloncesto, la NBA.
+
+Estas estrategias de inversión son marketing (estrategia A), infraestructura (B)
+o apostar por jugadores jóvenes (C).
+
+Pueden generar diferentes beneficios dependiendo del rendimiento del equipo
+texano. Las cuatro posibles situaciones y los beneficios según los escenarios
+son las siguientes:
+
+- Si el equipo no clasifica a play-off: la estrategia A da 25 millones de
+  dólares; la B da 15 y la C, 20.
+
+- Si Dallas clasifica a play-off pero no a las finales, con las estrategias se 
+  obtiene un beneficio de 35, 45 y 40 millones ($) respectivamente.
+ 
+- Si pierden la final los beneficios serán de 50, 55 y 45 (en millones de $).
+
+- Por último, si Dallas Mavericks resulta ganador del anillo, los beneficios se
+  irían a 70 millones con la estrategia A, 65 millones con la B y 80 con la C.
+
+
+Resuelve este problema mediante todos los criterios conocidos y explica las
+conclusiones obtenidas.
