@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Teniendo la matriz:
 
-$$
+```{=latex}
 \begin{array}{c|ccccc}
 
  & \text{e1} & \text{e2} & \text{e3} & \text{e4} & \text{e5} \\
@@ -23,7 +23,7 @@ $$
 \text{d3} & 10  &  1  &  4  &  8  & 7  \\
 
 \end{array}
-$$
+```
 
 Resuelve el problema con cada uno de los métodos o funciones individuales de
 Incertidumbre por separado (tanto en situación favorable como desfavorable).
