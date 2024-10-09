@@ -18,6 +18,101 @@
 
 ### Solución I -----------------------------------------------------------------
 
+source("teoriadecision_funciones_incertidumbre.R")
+
+tabla_1 <- crea.tablaX(c( 9, 11, 6, 3, 12,
+                          4,  2, 8, 7, 13, 
+                         10,  1, 4, 8,  7),
+                       numalternativas = 3,
+                       numestados = 5)
+tabla_1
+
+## Hacemos la función que escribe la solución dependiendo del método, el criterio,
+## el número de alternativas óptimas y, obviamente, la alternativa óptima.
+
+solucion <- function (x) {
+  
+  # Creamos las variables que se irán necesitando.
+  crit_sol = x$criterio
+  met_sol = x$metodo
+  opt_sol = x$AlternativaOptima
+  n_sol = length(opt_sol)
+  
+  # Hacemos la primera parte de la frase de la solución (método y criterio).
+  cat("En situación", met_sol, "y mediante el criterio de", crit_sol, 
+      if (n_sol == 1) {
+        "la solución es "
+      } else {
+        "las soluciones son "
+      })
+  
+  # Hacemos la parte final de la frase de la solución (alternativas óptimas).
+  if(n_sol == 1){
+    cat(opt_sol, ".")
+  }
+  else {
+    for(i in 1:(n_sol-1)) {
+      cat(opt_sol[i], "y ")
+    }
+    cat(opt_sol[n_sol], ".")
+  }
+  
+}
+
+#### Favorables ----------------------------------------------------------------
+
+##### Hurwicz ------------------------------------------------------------------
+
+solucion(criterio.Hurwicz(tabla_1))
+
+##### Hurwicz General ----------------------------------------------------------
+
+solucion(criterio.Hurwicz.General(tabla_1))
+
+##### Laplace ------------------------------------------------------------------
+
+solucion(criterio.Laplace(tabla_1))
+
+##### Optimista ----------------------------------------------------------------
+
+solucion(criterio.Optimista(tabla_1))
+
+##### PuntoIdeal ---------------------------------------------------------------
+
+solucion(criterio.PuntoIdeal(tabla_1))
+
+##### Savage -------------------------------------------------------------------
+
+solucion(criterio.Savage(tabla_1))
+
+
+#### Desfavorables -------------------------------------------------------------
+
+
+##### Hurwicz ------------------------------------------------------------------
+
+solucion(criterio.Hurwicz(tabla_1, favorable = F))
+
+##### Hurwicz General ----------------------------------------------------------
+
+solucion(criterio.Hurwicz.General(tabla_1, favorable = F))
+
+##### Laplace ------------------------------------------------------------------
+
+solucion(criterio.Laplace(tabla_1, favorable = F))
+
+##### Optimista ----------------------------------------------------------------
+
+solucion(criterio.Optimista(tabla_1, favorable = F))
+
+##### PuntoIdeal ---------------------------------------------------------------
+
+solucion(criterio.PuntoIdeal(tabla_1, favorable = F))
+
+##### Savage -------------------------------------------------------------------
+
+solucion(criterio.Savage(tabla_1, favorable = F))
+
 
 
 ## Problema II -----------------------------------------------------------------
