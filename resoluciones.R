@@ -148,3 +148,31 @@ solucion(criterio.Savage(tabla_1, favorable = F))
 
 
 ### Solución II ----------------------------------------------------------------
+
+# Primero, creamos la matriz del problema.
+
+tabla_2 <- crea.tablaX(c( 25, 35, 50, 70,
+                          15, 45, 55, 65, 
+                          20, 40, 45, 80),
+                       numalternativas = 3,
+                       numestados = 4)
+tabla_2
+
+# Resolvemos mediante todos los métodos a la vez.
+
+criterio.Todos(tabla_2, alfa = 0.5)
+
+# Vemos que las alternativas óptimas son la 1 ó la 3.
+#
+# Para Wald es la estrategia A la que hay que tomar, ya que en el caso más
+# pesimista (caer eliminados antes de play-off), es la que más beneficio reporta.
+#
+# Para los criterios Optimista, Hurwicz, Laplace y Punto Ideal es la estrategia 
+# C la que se debe adoptar, siendo esta la más beneficiosa en el caso de quedar 
+# campeones, la peor en caso de perder la final y la más equilibrada en los otros
+# dos escenarios.
+#
+# Para Savage, hay un empate entre las estrategias A y C.
+#
+# La segunda estrategia, la de la inversión en infraestructura, queda descartada
+# por todos los métodos.
