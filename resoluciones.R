@@ -85,6 +85,10 @@ solucion(criterio.PuntoIdeal(tabla_1))
 
 solucion(criterio.Savage(tabla_1))
 
+##### Wald -------------------------------------------------------------------
+
+solucion(criterio.Wald(tabla_1))
+
 
 #### Desfavorables -------------------------------------------------------------
 
@@ -112,6 +116,10 @@ solucion(criterio.PuntoIdeal(tabla_1, favorable = F))
 ##### Savage -------------------------------------------------------------------
 
 solucion(criterio.Savage(tabla_1, favorable = F))
+
+##### Wald -------------------------------------------------------------------
+
+solucion(criterio.Wald(tabla_1, favorable = F))
 
 
 
